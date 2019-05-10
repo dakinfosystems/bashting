@@ -3,5 +3,6 @@
 ## C++ environment settings
 
 
-
-refernce https://github.com/matrix207/emacs.d-1
+## Useful Links
+#refs https://github.com/matrix207/emacs.d-1
+#refs https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-en.org
