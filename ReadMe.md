@@ -1,7 +1,7 @@
 # Configuration of Development Environment
 
-## C++ environment settings
-
+## Emacs environment settings
+Copy emacs folder contents to configuration folder of emacs
 
 ## Useful Links
 For configuration [click here](https://github.com/matrix207/emacs.d-1) is forked from [here](https://github.com/redguardtoo/emacs.d)
