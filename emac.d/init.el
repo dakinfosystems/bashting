@@ -20,4 +20,36 @@
 (setq *emacs23* (and (not *xemacs*) (or (>= emacs-major-version 23))) )
 (setq *emacs24* (and (not *xemacs*) (or (>= emacs-major-version 24))) )
 
+
+;;-------------------------------------------------------------------------------
+;; Functions (load all files in defuns-dir)
+;; Copied from https://github.com/magnars/.emacs.d/blob/master/init.el
+;;-------------------------------------------------------------------------------
+(setq defuns-dir (expand-file-name "~/.emacs.d/defuns"))
+(dolist (file (directory-files defuns-dir t "\\w+"))
+  (when (file-regular-p file)
+    (load file)))
+
+
+;;-------------------------------------------------------------------------------
+;; Load settings
+;;-------------------------------------------------------------------------------
+;; Set dir path in variable
+(setq settings-dir
+      (expand-file-name "settings" user-emacs-directory))
+
+;; Set up load path
+(add-to-list 'load-path settings-dir)
+
+
+;; Appearance oo Theme settings
+;;-------------------------------------------------------------------------------
+(require 'appearance)
+
+;; General setting
+;;-------------------------------------------------------------------------------
+(require 'general)
+
+
+;----------------------*------------------*------------------*-------------------
 (message "Init done!!")
