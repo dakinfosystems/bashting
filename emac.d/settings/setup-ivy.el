@@ -9,7 +9,7 @@
 ;;==============================================================================
 
 ;; Add path load path of swiper
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/git/swiper"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/external/swiper"))
 
 ;;(message "load-path: %s" load-path)
 (require 'ivy)
