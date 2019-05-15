@@ -1,0 +1,3 @@
+[submodule "emac.d/external/swiper"]
+	path = emac.d/external/swiper
+	url = https://github.com/abo-abo/swiper.git
