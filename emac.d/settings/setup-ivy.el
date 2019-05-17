@@ -22,17 +22,28 @@
 ;; Ivy personallize setting
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
-
+(setq ivy-wrap t)
 
 ;; Ivy-based interface to standard commands
-(global-set-key (kbd "C-c i s") 'swiper)
+(global-set-key (kbd "C-s") 'swiper)
+(global-set-key (kbd "C-r") 'swiper)
 ;(global-set-key (kbd "C-x x") 'counsel-M-x)     ;; As it is already mapped
-(global-set-key (kbd "C-c i f") 'counsel-find-file)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "<f2> f") 'counsel-describe-function)
 (global-set-key (kbd "<f2> v") 'counsel-describe-variable)
 (global-set-key (kbd "<f2> l") 'counsel-find-library)
 (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
 (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+
+
+;; (global-set-key (kbd "C-c i s") 'swiper)
+;; ;(global-set-key (kbd "C-x x") 'counsel-M-x)     ;; As it is already mapped
+;; (global-set-key (kbd "C-c i f") 'counsel-find-file)
+;; (global-set-key (kbd "<f2> f") 'counsel-describe-function)
+;; (global-set-key (kbd "<f2> v") 'counsel-describe-variable)
+;; (global-set-key (kbd "<f2> l") 'counsel-find-library)
+;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
 
 
 ;;----------------------------------------------------------
