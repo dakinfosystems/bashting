@@ -1,9 +1,0 @@
-[submodule "emac.d/external/swiper"]
-	path = emac.d/external/swiper
-	url = https://github.com/abo-abo/swiper.git
-[submodule "emac.d/external/servers/ycmd"]
-	path = emac.d/external/servers/ycmd
-	url = https://github.com/Valloric/ycmd
-[submodule "emac.d/external/emacs-ycmd"]
-	path = emac.d/external/emacs-ycmd
-	url = https://github.com/abingham/emacs-ycmd
