@@ -1,6 +1,27 @@
 ################################################################################
 # Bash file to setup my linux environments
+#
+# To execute .bash file, write below code in ~/.bashrc in linux ~/.bash_profile
+# in MacOS.
+#
+# if [ -f "$HOME/.bashmy" ]; then
+#     #echo "Loading..."
+#     . $HOME/.bashmy
+# fi
 ################################################################################
+
+#--------------------------------------------------------------------------------
+# Find out OS type
+#--------------------------------------------------------------------------------
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+#echo ${machine}
 
 #-------------------------------------------------------------------------------
 # Proxy settings
