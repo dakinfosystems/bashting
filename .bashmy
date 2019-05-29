@@ -31,9 +31,16 @@ if [ -f $HOME/bashting/.proxy ]; then
 fi
 
 #-------------------------------------------------------------------------------
+# PATH Setting
+#-------------------------------------------------------------------------------
+if [ -f $HOME/bashting/.envpath ]; then
+   . $HOME/bashting/envpath
+fi
+
+#-------------------------------------------------------------------------------
 # Alias of commands to shorten them
 #-------------------------------------------------------------------------------
-alias em='emacs -nw'	# for emacs to run in no window mode
+if [ -f $HOME/bashting/.aliases ]; then
+   . $HOME/bashting/.aliases
+fi
 
-alias lal='ls -al'
-alias lla='ls -al'
