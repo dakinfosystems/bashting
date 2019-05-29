@@ -4,9 +4,9 @@
 # To execute .bash file, write below code in ~/.bashrc in linux ~/.bash_profile
 # in MacOS.
 #
-# if [ -f "$HOME/.bashmy" ]; then
+# if [ -f "$HOME/bashting/.bashmy" ]; then
 #     #echo "Loading..."
-#     . $HOME/.bashmy
+#     . $HOME/bashting/.bashmy
 # fi
 ################################################################################
 
@@ -26,20 +26,9 @@ esac
 #-------------------------------------------------------------------------------
 # Proxy settings
 #-------------------------------------------------------------------------------
-user="pjain5"
-password=""
-if [ -f ~/.auth ]; then
-    password=`cat ~/.auth`
+if [ -f $HOME/bashting/.proxy ]; then
+   . $HOME/bashting/.proxy
 fi
-url="185.46.212.88"
-port="80"
-
-proxy_user="$user:$password"
-proxy_server="$url:$port"
-
-export http_proxy="http://$proxy_user@$proxy_server"
-export https_proxy="http://$proxy_user@$proxy_server"
-export ftp_proxy="http://$proxy_user@$proxy_server"
 
 #-------------------------------------------------------------------------------
 # Alias of commands to shorten them

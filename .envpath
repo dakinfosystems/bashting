@@ -1,0 +1,14 @@
+#################################################################################
+# File to set user specfic path in environment variable
+#
+# Write your path below. They will be added to path
+#################################################################################
+
+#--------------------------------------------------------------------------------
+# Setting my custom path
+#--------------------------------------------------------------------------------
+# PATH="/path/to/your/directory:${PATH}"
+
+# Keep this line in the end.
+# Finally exporting path to environment variable
+export PATH

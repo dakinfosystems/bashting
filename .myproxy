@@ -1,0 +1,27 @@
+#################################################################################
+# Proxy file to setup proxy
+#
+# To set proxy in system rename this file to .proxy
+# Update user name and create .auth file in home directory and write password in
+# it.
+# Change url and port to appropriate proxy server url and port number
+#
+#################################################################################
+
+#--------------------------------------------------------------------------------
+# setting proxy
+#--------------------------------------------------------------------------------
+user="pjain5"
+password=""
+if [ -f ~/.auth ]; then
+    password=`cat ~/.auth`
+fi
+url="185.46.212.88"
+port="80"
+
+proxy_user="$user:$password"
+proxy_server="$url:$port"
+
+export http_proxy="http://$proxy_user@$proxy_server"
+export https_proxy="http://$proxy_user@$proxy_server"
+export ftp_proxy="http://$proxy_user@$proxy_server"
