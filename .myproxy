@@ -11,15 +11,25 @@
 #--------------------------------------------------------------------------------
 # setting proxy
 #--------------------------------------------------------------------------------
-user="pjain5"
+user=""
 password=""
+
+proxy_user=""
+
 if [ -f ~/.auth ]; then
     password=`cat ~/.auth`
 fi
-url="185.46.212.88"
+
+if [ ! -w $user ] && [ ! -w $password ]; then
+	proxy_user="$user:$password"
+elseif [ ! -w $user ]
+	# if you want to set only user name then uncomment below line
+	# proxy_user="$user"
+fi
+
+url="XXX.XXX.XXX.XXX"
 port="80"
 
-proxy_user="$user:$password"
 proxy_server="$url:$port"
 
 export http_proxy="http://$proxy_user@$proxy_server"
