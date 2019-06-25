@@ -6,9 +6,15 @@
 
 #-------------------------------------------------------------------------------
 # Aliases
-#-------------------------------------------------------------------------------
-alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-#alias em='emacs -nw'	# for emacs to run in no window mode
-
 alias lal='ls -al'
 alias lla='ls -al'
+
+# Alias for printing directory structure
+alias lstree="ls -R | grep ':$' | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+
+# Alias for sudo to run with user's environment setting
+alias sudo="sudo -E"
+
+# Add more alias as per your requirements
+# adding emacs alias for non window
+alias em="emacs -nw"

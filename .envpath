@@ -9,12 +9,6 @@
 #-------------------------------------------------------------------------------
 # PATH="/path/to/your/directory:${PATH}"
 
-# Setting path for Python 3.7
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-
-# Setting path for tradebot virtual environment
-PATH="/Users/pramod/workspace/local/tradebot/venv3/bin:${PATH}"
-
 
 # Keep this line in the end.
 # Finally exporting path to environment variable
