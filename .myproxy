@@ -13,25 +13,29 @@
 #--------------------------------------------------------------------------------
 user=""
 password=""
+url="XXX.XXX.XXX.XXX"
+port="80"
 
-proxy_user=""
+proxy_url="$url:$port"
 
 if [ -f ~/.auth ]; then
     password=`cat ~/.auth`
 fi
 
 if [ ! -w $user ] && [ ! -w $password ]; then
-	proxy_user="$user:$password"
+	proxy_url="$user:$password@$proxy_url"
 elseif [ ! -w $user ]
 	# if you want to set only user name then uncomment below line
-	# proxy_user="$user"
+	# proxy_url="$user@$proxy_url"
 fi
 
-url="XXX.XXX.XXX.XXX"
-port="80"
+export http_proxy="http://$proxy_url/"
+export https_proxy="http://$proxy_url/"
+export ftp_proxy="http://$proxy_url/"
 
-proxy_server="$url:$port"
-
-export http_proxy="http://$proxy_user@$proxy_server"
-export https_proxy="http://$proxy_user@$proxy_server"
-export ftp_proxy="http://$proxy_user@$proxy_server"
+#-------------------------------------------------------------------------------
+# Set proxy in other application
+#-------------------------------------------------------------------------------
+# set proxy in npm
+export npm_config_proxy="http://$proxy_url/"
+export npm_config_https="http://$proxy_url/"
